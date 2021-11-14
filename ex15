@@ -1,0 +1,31 @@
+class CCircle
+{
+    private double pi = 3.14;
+    private double radius;
+
+    public CCircle(double r)
+    {
+        radius=r;
+    }
+    public static double avarage(CCircle c[])
+    {
+        int sum=0;
+        for(int i =0;i<c.length;i++)
+            sum+=c[i].radius;
+        return (sum/c.length);
+    }
+}
+
+public class ex15
+{
+    public static void main(String args[])
+    {
+        CCircle cirl[];
+        cirl=new CCircle[3];
+        cirl[0]=new CCircle(2.0);
+        cirl[1]=new CCircle(4.0);
+        cirl[2]=new CCircle(3.0);
+
+    System.out.println("avaerage radius = "+CCircle.avarage(cirl));
+    }
+}
